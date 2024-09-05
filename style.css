@@ -140,4 +140,95 @@ section {
     padding: 1% 10%;
     position: sticky;
     top:0px;
+    z-index: 1000;
+}
+/*trending section*/
+.center-text h2{
+    text-align: center;
+    text-transform: capitalize ;
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+}
+.center-text span{
+    color: crimson;
+}
+.products{
+    display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(260px,auto));
+        gap: 2rem;
+}
+.row{
+    position: relative;
+    transition: all .40s ease;
+}
+.row img{
+    width: 100%;
+    height: auto;
+    transition: all .40s ease;
+}
+.row img:hover{
+    transform: scale(0.9);
+}
+.product-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    columns: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: green;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+.heart-icon{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+.heart-icon:hover{
+    color: crimson;
+}
+.ratting i{
+    color: gold;
+    font-size: 18px;
+}
+.price h4{
+    color: black;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+}
+.price p{
+    color: black;
+   
+    font-size: 14px;
+    font-weight: 600;
+}
+.reviews img{
+    width: 100px;   
+    height: auto;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+.client-reviews{
+    background-color: #f3f4f6;
+}
+.reviews{
+    text-align: center;
+}
+.reviews h3{
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 700;
+}
+.reviews p{
+    color: #707070;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 10px ;
 }
