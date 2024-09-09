@@ -232,3 +232,111 @@ section {
     line-height: 25px;
     margin-bottom: 10px ;
 }
+.reviews h2{
+        font-size: 22px;
+        color: black;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-bottom: 2px;
+}
+
+/* update section */
+
+.up-center-text{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.cart img{
+    width: 380px;
+    height: auto;
+    border-radius: 5px;
+}
+.update-cart{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(380px,auto));
+    gap: 1rem;
+}
+.cart h5{
+    color: grey;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.cart h4{
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+.cart p{
+    color: #707070;
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.cart h6{
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+    /*contact-section*/
+
+.contact{
+    background-color: #1d1c1c;
+    color: white;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+    gap: 3rem;
+}
+.contact-info h3{
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.contact-info p{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.42s;
+}
+.social-icons i{
+    color: white;
+    inline-size: 1.5;
+    font-size: 20px;
+    transition: all 0.42s;
+}
+#fb i:hover{
+    transform: scale(1.3);
+    color: blue;
+}
+#twiter i:hover{
+    transform: scale(1.3);
+    color: rgb(22, 101, 219);
+}
+#yt i:hover{
+    transform: scale(1.3);
+    color: red;
+}
+#tiktok i:hover{
+    transform: scale(1.3);
+    color: rgb(148, 7, 89);
+}
+#insta i:hover{
+    transform: scale(1.3);
+    color: rgb(219, 17, 118);
+}
+#pinterest i:hover{
+    transform: scale(1.3);
+    color: rgb(245, 10, 49);
+}
