@@ -3,7 +3,7 @@
     padding: 0%;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans" sans-serif;
     font-weight: 400;
     font-style: normal;  
      
@@ -11,23 +11,141 @@
 ul{
     list-style: none;
 }
-header{
+.notice{
+    background-color: rgb(190, 70, 27);
+    color: white;
+    height: 30px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 0.5%;
+}
+.notice {
+    cursor: pointer;
+}
+
+.notice:hover .arrow {
+    transition: transform 0.3s ease;
+    transform: translateX(10px); 
+}
+.contact-row{
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+.contact-row p{
+    text-align: center;
+    animation: normal;
+    padding-top: 0.5%;
+}
+.contact-no{
+    cursor: pointer;
+    float: left;
+    margin-left: 1.5%;
+    font-size: small;
+    padding-top: 1%;
+}
+.contact-no li{
+    display: inline;
+}
+.contact-email{
+    cursor: pointer;
+    float: right;
+    margin-right: 1.5%;
+    margin-top: 0%;
+    margin-bottom: 0.8%;
+
+}
+.feedback{
     position: fixed;
+    top: 50%;
+    left: 0%;
+    border-radius: 5%;
+    background-color: rgb(226, 65, 6);
+    color: white;
+    z-index: 1000;
+    width: 3%;
+    height: 100px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+.feedback h5{
+    margin-right: 5px;
+}
+.feedback:hover{
+    cursor: pointer;
+    box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.5); 
+    transition: transform .42s ease;
+}
+
+
+header {
+    position: sticky;
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 1000;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 10%;
 }
+.logo{
+    display: block;
+}
 .logo img{
     max-width: 120px;
     height: auto;
+    margin-left: 45%;
+    align-items: center;
 }
+#sale sup{
+    background-color:  rgb(190, 70, 27) ;
+}
+#sale{
+    position: relative;
+}
+#sale-ul{
+    position: absolute;
+    display: none;
+    top: 100%;
+}
+#sale:hover ul{
+    display: block;
+    background-color: white;
+    h3{
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+#new-arrival{
+    position: relative;
+}
+#new-arrival-ul{
+    position: absolute;
+    display: none;
+    top: 100%;
+}
+#new-arrival:hover ul{
+    display: block;
+    background-color: white;
+    
+}
+#unstitched{
+    position: relative;
+}
+#unstitched-ul{
+    position: absolute;
+    display: none;
+    top: 100%;
+}
+#unstitched-ul:hover ul{
+    display: block;
+    background-color: white;
+    
+}
+
 .navmenu{
-    display: flex;  
+    display: flex;
 }
 .navmenu a{
     color: darkred;
@@ -37,6 +155,7 @@ header{
     text-transform: capitalize;
     transition: all .42s ease;
 }
+
 .navmenu a:hover{
     color: rebeccapurple;
 }
@@ -55,6 +174,7 @@ header{
     color: red;
     transform: scale(1.1);
 }
+
 #menu-icon{
     font-size: 35px;
     color: darkred;
@@ -80,39 +200,7 @@ section {
     text-transform: capitalize;
     font-weight: 500;
 }
-.main-home h1{
-    color: white;
-    font-size: 23px;
-    text-transform: capitalize;
-    line-height: 1.1;
-    font-weight: 600;
-    margin: 6px 0 10px;
-}
-.main-text{
-    color: rgb(248, 248, 246);
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-.main-btn{
-    
-    color:white;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: capitalize;  
-    border: 2px solid black;
-    padding: 12px 25px;
-    transition: all .42s ease;
-    display: inline-block;
-}
-.main-btn:hover{
-    background-color: black;
-    color: rgb(190, 190, 32);
-}
-.main-btn i{
-    vertical-align: middle;
-    
-}
+
 .down{
     position: absolute;
     top: 85%;
