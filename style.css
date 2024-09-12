@@ -1,3 +1,5 @@
+    /* UNIVERSAL PROPERTIES*/
+
 *{
     margin: 0;
     padding: 0%;
@@ -11,6 +13,11 @@
 ul{
     list-style: none;
 }
+a{
+    list-style: none;
+}
+
+    /* NOTICE */
 .notice{
     background-color: rgb(190, 70, 27);
     color: white;
@@ -23,10 +30,12 @@ ul{
     cursor: pointer;
 }
 
-.notice:hover .arrow {
+.notice:hover  p span{
     transition: transform 0.3s ease;
     transform: translateX(10px); 
 }
+
+    /* CONTACT ROW */
 .contact-row{
     overflow: hidden;
     background-color: whitesmoke;
@@ -54,6 +63,8 @@ ul{
     margin-bottom: 0.8%;
 
 }
+
+    /* FEEDBACK BUTTON */
 .feedback{
     position: fixed;
     top: 50%;
@@ -79,7 +90,19 @@ ul{
     transition: transform .42s ease;
 }
 
+    /* LOGO */
+.logo{
+    display: block;
+    position: sticky;
+}
+.logo img{
+    max-width: 120px;
+    height: auto;
+    margin-left: 45%;
+    align-items: center;
+}
 
+    /* HEADER */
 header {
     position: sticky;
     width: 100%;
@@ -89,20 +112,41 @@ header {
     justify-content: space-between;
     padding: 20px 10%;
 }
-.logo{
-    display: block;
-}
-.logo img{
-    max-width: 120px;
-    height: auto;
-    margin-left: 45%;
+.header{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    padding: 1% 10%;
+    position: sticky;
+    top:0px;
+    z-index: 1000;
 }
+
+          /* MENU */
+
+    .navmenu{
+        display: flex;
+    }
+    .navmenu a{
+        color: black;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-transform: capitalize;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    /* SALE */
 #sale sup{
     background-color:  rgb(190, 70, 27) ;
+    color: white;
 }
 #sale{
     position: relative;
+    cursor: pointer;
+    
 }
 #sale-ul{
     position: absolute;
@@ -117,8 +161,14 @@ header {
         font-size: 20px;
     }
 }
+    /* NEW ARRIVALS */
 #new-arrival{
+    a{
+        color: red;
+    }
     position: relative;
+    cursor: pointer;
+    
 }
 #new-arrival-ul{
     position: absolute;
@@ -130,9 +180,7 @@ header {
     background-color: white;
     
 }
-#unstitched{
-    position: relative;
-}
+
 #unstitched-ul{
     position: absolute;
     display: none;
@@ -144,21 +192,24 @@ header {
     
 }
 
-.navmenu{
-    display: flex;
+    /* PRE WINTER */
+#pre-winter{
+    position: relative;
 }
-.navmenu a{
-    color: darkred;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    transition: all .42s ease;
+#pre-winter-ul{
+    position: absolute;
+    display: none;
+    background-color: white;
+ 
+}
+#pre-winter:hover ul{
+    display: block;
 }
 
-.navmenu a:hover{
-    color: rebeccapurple;
-}
+
+
+
+    /* MENU ICONS */
 .nav-icon{
     display: flex;
     align-items: center;   
@@ -184,6 +235,8 @@ header {
 section {
     padding: 12% 2%;
 }
+
+    /* SALE IMAGE */
 .main-home{
     width: 100%; 
     height: 70vh;
@@ -201,6 +254,7 @@ section {
     font-weight: 500;
 }
 
+    /* DOWN BUTTON */
 .down{
     position: absolute;
     top: 85%;
@@ -219,18 +273,7 @@ section {
     transition: all .42s ease;
 }
 
-.header{
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 10%;
-    position: sticky;
-    top:0px;
-    z-index: 1000;
-}
-/*trending section*/
+    /* TRENDING SECTION */
 .center-text h2{
     text-align: center;
     text-transform: capitalize ;
@@ -294,6 +337,8 @@ section {
     font-size: 14px;
     font-weight: 600;
 }
+
+    /*  CLIENT REVIEW */
 .reviews img{
     width: 100px;   
     height: auto;
@@ -328,7 +373,7 @@ section {
         margin-bottom: 2px;
 }
 
-/* update section */
+    /* UPDATES SECTION */
 
 .up-center-text{
     text-align: center;
@@ -372,7 +417,7 @@ section {
     font-weight: 500;
 }
 
-    /*contact-section*/
+    /* CONTACT SECTION */
 
 .contact{
     background-color: #1d1c1c;
@@ -440,7 +485,7 @@ section {
     padding: 7%;
     
 }
-/* Responsive -css */
+    /* RESPONSIVE CSS */
 
 @media(max-width:890px) {
     header{
