@@ -98,15 +98,18 @@ header {
     width: 100%;
     justify-content: space-between;
     padding: 20px 10%;
+    
+}
+.header {
+    background-color: white;
     position: sticky;
     top:0px;
     z-index: 1000;
 }
-                /* LOGO */
-    
+                /* LOGO */  
     .logo{
         display: inline;
-        position: sticky;
+       /* position: sticky; */
     }
     .logo img{
         max-width: 120px;
@@ -114,7 +117,6 @@ header {
         margin-left: 45%;
         align-items: center;
     }
-
                 /* MENU ICONS */
 
     .nav-icon{
@@ -133,41 +135,22 @@ header {
         color: red;
         transform: scale(1.1);
     }
-        
-    #menu-icon{
-        font-size: 35px;
-        color: darkred;
-        z-index: 10001;
-        cursor: pointer;
-    }
-    section {
-        padding: 12% 2%;
-    }
-
 .header .navmenu{
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     padding: 1% 10%; 
+    margin-bottom: 15px;
 }
-
           /* MENU */
-
-    .navmenu{
-        display: flex;
-        
-    justify-content: space-between;
-    }
     .navmenu a{
         color: black;
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 14px;
+        padding: 10px 12px;
         text-transform: capitalize;
         list-style: none;
-        text-decoration: none;
+        text-decoration: none;  
     }
-
     /* SALE */
 #sale sup{
     background-color:  rgb(190, 70, 27) ;
@@ -182,6 +165,9 @@ header {
     cursor: pointer;
     
 }
+.sale{
+    background-color: white;
+}
 #sale-ul{
     position: absolute;
     display: none;
@@ -195,7 +181,9 @@ header {
         font-size: 20px;
     }
 }
-
+#shop-by-season div{
+    float: right;
+}
 
     /* NEW ARRIVALS */
 #new-arrival{
@@ -336,71 +324,83 @@ header {
 }
 
 
-    /* TRENDING SECTION */
-.center-text h2{
-    text-align: center;
-    text-transform: capitalize ;
-    font-size: 28px;
-    color: black;
-    margin-bottom: 20px;
-}
-.center-text span{
-    color: crimson;
-}
-.products{
-    display: grid;
-        grid-template-columns: repeat(auto-fit , minmax(260px,auto));
-        gap: 2rem;
-}
-.row{
-    position: relative;
-    transition: all .40s ease;
-}
-.row img{
-    width: 100%;
-    height: auto;
-    transition: all .40s ease;
-}
-.row img:hover{
-    transform: scale(0.9);
-}
-.product-text h5{
-    position: absolute;
-    top: 13px;
-    left: 13px;
-    columns: white;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: green;
-    padding: 3px 10px;
-    border-radius: 2px;
-}
-.heart-icon{
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-}
-.heart-icon:hover{
-    color: crimson;
-}
-.ratting i{
-    color: gold;
-    font-size: 18px;
-}
-.price h4{
-    color: black;
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 400;
-}
-.price p{
-    color: black;
-   
-    font-size: 14px;
-    font-weight: 600;
-}
+        /* end of season sale */
 
+        /* TEXT */
+
+.slider h2 {
+    font-weight: 700;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .slider h2::before, .slider h2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #0000003f;
+    margin: 0 15px;
+  }
+  
+  .slider h2 {
+    white-space: nowrap;
+    font-size: 24px; /* Adjust font size */
+  }
+
+    /* IMAGES */
+    .slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin: 20px auto;
+      }
+      
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px; /* Space between slides */
+      }
+      
+      .slide img {
+        width: 100%;
+        height: 450px;
+      }
+      
+      .product-text {
+        text-align: center;
+        margin-top: 10px;
+      }
+      
+      .price, .discount {
+        display: block;
+        margin: 5px 0;
+      }
+      
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 10px;
+      }
+      
+  
     /*  CLIENT REVIEW */
 .reviews img{
     width: 100px;   
@@ -542,9 +542,14 @@ header {
     transform: scale(1.3);
     color: rgb(245, 10, 49);
 }
+.email-Address{
+    border: white;
+    border-radius: 8px;
+    border-color: white;
+}
 .end-text{
     background-color: #1d1c1c;
     color: white;
     padding: 7%;
-    
+
 }
