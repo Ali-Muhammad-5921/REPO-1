@@ -32,40 +32,66 @@ a{
 
 .notice:hover  p span{
     transition: transform 0.3s ease;
-    transform: translateX(10px); 
+    transform: translateX(10px) scale(1.2); 
 }
 
-    /* CONTACT ROW */
-.contact-row{
-    overflow: hidden;
-    background-color: whitesmoke;
-}
-.contact-row p{
-    text-align: center;
-    padding-top: 0.5%;
-    width: 30%;
-    float: left;
-}
-.contact-no{
-    cursor: pointer;
-    float: left;
-    margin-left: 1.5%;
-    font-size: small;
-    margin-top: 1%;
-    width: 35%;
-    margin-bottom: 1%;
-}
-.contact-no li{
-    display: inline;
-}
-.contact-email{
-    cursor: pointer;
-    float: right;
-    margin-right: 1.5%;
-    margin-top: 1%;
-    margin-bottom: 0.8%;
+        /* CONTACT ROW */
+    .contact-row{
+        overflow: hidden;
+        background-color: whitesmoke;
+    }
+    .contact-row>div{
+        background-color: whitesmoke;
+        z-index: 1000;
+    }
+    .contact-row p{ 
+        text-align: center;
+        padding-top: 0.5%;
+        width: 30%;
+        float: left;
+        z-index: -1;
+    }
+    .contact-no{
+        cursor: pointer;
+        float: left;
+        margin-left: 1.5%;
+        font-size: small;
+        margin-top: 1%;
+        width: 35%;
+        margin-bottom: 1%;
+    }
+    .contact-no li{
+        display: inline;
+    }
+    .contact-email{
+        cursor: pointer;
+        font-size: 800;
+        float: right;
+        margin-right: 1.5%;
+        margin-top: 1%;
+        margin-bottom: 0.8%;
+    
+    }
 
-}
+    .moving-text {
+        text-align: center;
+        padding: 0.5%; /* Add some padding */
+        flex-grow: 1; /* Allow the p tag to grow and take available space */
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow: hidden; /* Hide overflow */
+        animation: moveText 10s linear infinite; /* Animation properties */
+    }
+    
+    @keyframes moveText {
+        0% {
+            transform: translateX(100%); /* Start off the screen to the right */
+        }
+        100% {
+            transform: translateX(-100%); /* Move off the screen to the left */
+        }
+    }
+    
+
 
     /* FEEDBACK BUTTON */
 .feedback{
@@ -158,32 +184,8 @@ header {
     border-radius: 4px;
     padding: 2px;
 }
-#sale{
-    position: relative;
-    margin-left: 50px;
-    margin-right: 3%;
-    cursor: pointer;
-    
-}
-.sale{
-    background-color: white;
-}
-#sale-ul{
-    position: absolute;
-    display: none;
-    top: 100%;
-}
-#sale:hover ul{
-    display: block;
-    background-color: white;
-    h3{
-        font-weight: bold;
-        font-size: 20px;
-    }
-}
-#shop-by-season div{
-    float: right;
-}
+
+
 
     /* NEW ARRIVALS */
 #new-arrival{
@@ -400,6 +402,36 @@ header {
         right: 10px;
       }
       
+      /* SHOP BY CATEGORY */
+.shop-by-category h2 {
+    font-weight: 700;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+.shop-by-category  h2::before, .shop-by-category h2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #0000003f;
+    margin: 0 15px;
+  }
+  
+  .shop-by-category h2 {
+    white-space: nowrap;
+    font-size: 24px; /* Adjust font size */
+  }
+
+.shop-by-category>div{
+    display: flex;
+    margin-left: 15px;
+}
+.shop-by-category img{
+    padding: 10px;
+    width: 50%;
+}
+    
   
     /*  CLIENT REVIEW */
 .reviews img{
@@ -409,7 +441,7 @@ header {
     margin: 10px 0;
 }
 .client-reviews{
-    background-color: #f3f4f6;
+    background-color: #1757d828;
 }
 .reviews{
     text-align: center;
@@ -437,6 +469,24 @@ header {
 }
 
     /* UPDATES SECTION */
+.up-center-text h2 {
+    font-weight: 700;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+.up-center-text h2::before, .up-center-text h2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #0000003f;
+    margin: 0 15px;
+  }
+  
+  .up-center-text h2 {
+    white-space: nowrap;
+    font-size: 24px; /* Adjust font size */
+  }
 
 .up-center-text{
     text-align: center;
@@ -487,7 +537,7 @@ header {
     color: white;
 }
 .contact-info{
-    
+    padding-top: 70px;
     margin-left: 7%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(160px,auto));
@@ -542,14 +592,18 @@ header {
     transform: scale(1.3);
     color: rgb(245, 10, 49);
 }
+
+
 .email-Address{
     border: white;
     border-radius: 8px;
     border-color: white;
 }
 .end-text{
+    margin-left: 7%;
+    height: 100px;
+    padding-top: 2.5%;
     background-color: #1d1c1c;
     color: white;
-    padding: 7%;
-
+    
 }
