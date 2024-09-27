@@ -426,12 +426,48 @@ header {
 .shop-by-category>div{
     display: flex;
     margin-left: 15px;
+    
 }
 .shop-by-category img{
+    cursor: pointer;
     padding: 10px;
     width: 50%;
 }
+.sbc-img:hover{
+    opacity: 0.7;
+}
+.shop-by-category>div>li{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    list-style: none;
+    width: 30%;
+    margin-left: 20px;
+}
+#info h4{
+    font-size: large;
+    font-weight: bold;
+}
+
+#info i{
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 44px;
+    padding: 3%;
+    border: 1px solid black; 
+    border-radius: 50px;
     
+}
+#info i:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.45s ease;
+    transform: scale(1.1s);
+}
+
+
+  
   
     /*  CLIENT REVIEW */
 .reviews img{
@@ -592,13 +628,28 @@ header {
     transform: scale(1.3);
     color: rgb(245, 10, 49);
 }
-
-
-.email-Address{
-    border: white;
-    border-radius: 8px;
-    border-color: white;
+.email-Address {
+    border: 1px solid #ccc; 
+    border-radius: 25px; 
+    padding: 10px; 
+    font-size: 14px; 
+   
 }
+.email-Address span{
+    margin-left: 60px;
+    background-color: #161616;
+    border:  solid #161616; 
+    border-radius: 25px; 
+    padding-right: 0%;
+    padding: 10px; 
+   
+}
+.email-Address span:hover{
+    background-color: black;
+    border:  solid black; 
+    transition: all 0.45s ease;
+}
+
 .end-text{
     margin-left: 7%;
     height: 100px;
