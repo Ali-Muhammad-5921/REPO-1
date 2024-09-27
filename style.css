@@ -183,28 +183,60 @@ header {
     color: white;
     border-radius: 4px;
     padding: 2px;
+} 
+
+.dropdown-menu,
+.dropdown-menu-1 {
+    display: none;
+}
+.navmenu li:hover .dropdown-menu {
+    border: 3px solid white;
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 95%;
+    background-color: white;
+    z-index: 1000; 
 }
 
+/* Style for the dropdown items */
+.navmenu .dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Style each dropdown item */
+.navmenu .dropdown-menu ul li {
+    color: black;
+    width: 250px;
+    padding: 10px;
+}
+
+/* Show the sub-dropdown on hover of the parent li */
+.navmenu .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 250px; /* Adjust to match the width of your parent li */
+    background-color: white;
+    z-index: 1001; /* Ensures sub-dropdown is above other content */
+}
+
+/* Basic styling for the sub-dropdown */
+.navmenu .dropdown-menu-1 ul li {
+    padding: 8px;
+}
 
 
     /* NEW ARRIVALS */
 #new-arrival{
-    a{
-        color: red;
-    }
+     color: red;
     position: relative;
     cursor: pointer;
-    
 }
-#new-arrival-ul{
-    position: absolute;
-    display: none;
-    top: 100%;
-}
-#new-arrival:hover ul{
-    display: block;
-    background-color: white;
-    
+.fa-caret-right{
+    float: right;
 }
     /* UNSTITICHED */
 
@@ -465,10 +497,6 @@ header {
     transition: all 0.45s ease;
     transform: scale(1.1s);
 }
-
-
-  
-  
     /*  CLIENT REVIEW */
 .reviews img{
     width: 100px;   
