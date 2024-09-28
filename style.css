@@ -185,6 +185,37 @@ header {
     padding: 2px;
 } 
 
+.dropdown-menu-4 {
+    display: none;
+}
+.dropdown-menu-4 h3{
+    font-weight: 700;
+}
+.dropdown-menu-4>div{
+    margin: 20px;
+}
+.navmenu li:hover .dropdown-menu-4 {
+    border: 3px solid white;
+    display: flex;
+    position: absolute;
+    left: 150px;
+    top: 95%;
+    background-color: white;
+    z-index: 1000; 
+}
+.navmenu .dropdown-menu-4 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navmenu .dropdown-menu-4 ul li {
+    color: black;
+    width: 250px;
+    padding: 10px;
+}
+
+
 .dropdown-menu,
 .dropdown-menu-1 {
     display: none;
@@ -227,8 +258,6 @@ header {
 .navmenu .dropdown-menu-1 ul li {
     padding: 8px;
 }
-
-
     /* NEW ARRIVALS */
 #new-arrival{
      color: red;
@@ -255,100 +284,210 @@ header {
 #pre-winter{
     position: relative;
 }
-#pre-winter-ul{
-    position: absolute;
-    top: 100%;
-    display: none;
-    background-color: white;
- 
-}
-#pre-winter:hover ul{
-    display: block;
+
+#dropdown-2{
+    border: 3px solid white;
+    top: 95%;
+    left: 300px;
+    width: 250px;
+    padding: 8px;
 }
 
     /* WOMEN */
 #women{
     position: relative;
 }
-#women-ul{
-    position: absolute;
-    display: none;
-    top: 100%;
-    background-color: white;
-}
-#women:hover ul{
-    display: block;
-}
 
+.dropdown-menu-3{
+    display: none;
+}
+.dropdown-menu-3 h3{
+    font-weight: bolder;
+}
+.navmenu li:hover .dropdown-menu-3 {
+    border: 3px solid white;
+    display: flex;
+    position: absolute;
+    left: -250px;
+    top: 105%;
+    background-color: white;
+    z-index: 1000; 
+}
+.navmenu .dropdown-menu-3 ul {
+    margin: 0;
+    padding: 10%;
+    list-style-type: none;
+}
+.navmenu .dropdown-menu-3 ul li {
+    color: black;
+    width: 250px;
+    padding: 10px;
+}
     /* MEN */
 #men{
     position: relative;
 }
-#men-ul{
-    position: absolute;
+#dropdown-4{
     display: none;
-    top: 100%;
-    background-color: white;
+    padding: 8px;
 }
-#men:hover ul{
+.navmenu li:hover #dropdown-4 {
+    border: 3px solid white;
     display: block;
+    position: absolute;
+    left: 580px;
+    top: 95%;
+    background-color: white;
+    z-index: 1000; 
 }
+.navmenu #dropdown-4 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navmenu #dropdown-4 ul li {
+    color: black;
+    width: 250px;
+    padding: 10px;
+}
+
 
     /* READY TO WEAR */
-#ready-to-wear{
-    position: relative;
-}
-#ready-to-wear-ul{
-    position: absolute;
-    display: none;
-    top: 100%;
-    background-color: white;
-}
-#ready-to-wear:hover ul{
-    display: block;
-}
-
+    #ready-to-wear {
+        position: relative;
+    }
+    #dropdown-3{
+        display: none;  
+        padding: 8px;
+    }
+    .navmenu li:hover #dropdown-4 {
+        border: 3px solid white;
+        display: block;
+        position: absolute;
+        left: 380px;
+        top: 95%;
+        background-color: white;
+        z-index: 1000; 
+    }
+    
+    /* Style for the dropdown items */
+    .navmenu #dropdown-3 ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    /* Style each dropdown item */
+    .navmenu #dropdown-3 ul li {
+        color: black;
+        width: 250px;
+        padding: 10px;
+    }
+    
     /* HOME */
 #home{
     position: relative;
 }
-#home-ul{
-    position: absolute;
+.dropdown-menu-2{
+    list-style: none;
     display: none;
-    top: 100%;
-    background-color: white;
 }
-#home:hover ul{
-    display: block;
+.dropdown-menu-2 h3{
+    font-weight: bolder;
+}
+.dropdown-menu-2{
+    margin: 10px;
+}
+.navmenu li:hover .dropdown-menu-2 {
+    border: 3px solid white;
+    display: flex;
+    position: absolute;
+    left: -600px;
+    top: 95%;
+    background-color: white;
+    z-index: 1000; 
 }
 
+/* Style for the dropdown items */
+.navmenu .dropdown-menu-2 ul {
+    margin: 0;
+    padding: 5%;
+    list-style-type: none;
+}
+
+/* Style each dropdown item */
+.navmenu .dropdown-menu-2 ul li {
+    color: black;
+    width: 250px;
+    padding: 10px;
+}
     /* ACCESSORIES */
 #accessories{
     position: relative;
 }
-#accessories-ul{
-    position: absolute;
+#dropdown-5{
     display: none;
-    top: 100%;
-    background-color: white;
+   
+    padding: 8px;
 }
-#accessories:hover ul{
+.navmenu li:hover #dropdown-5 {
+    border: 3px solid white;
     display: block;
+    position: absolute;
+    left: -60px;
+    top: 95%;
+    background-color: white;
+    z-index: 1000; 
 }
+
+/* Style for the dropdown items */
+.navmenu #dropdown-5 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Style each dropdown item */
+.navmenu #dropdown-5 ul li {
+    color: black;
+    width: 250px;
+    padding: 10px;
+}
+
 
     /* LINGERIE */
 #lingerie{
     position: relative;
 }
-#lingerie-ul{
-    position: absolute;
+#dropdown-6{
     display: none;
-    top: 100%;
-    background-color: white;
+   
+    padding: 8px;
 }
-#lingerie:hover ul{
+.navmenu li:hover #dropdown-6 {
+    border: 3px solid white;
     display: block;
+    position: absolute;
+    left: -60px;
+    top: 95%;
+    background-color: white;
+    z-index: 1000; 
 }
+
+/* Style for the dropdown items */
+.navmenu #dropdown-6 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Style each dropdown item */
+.navmenu #dropdown-6 ul li {
+    color: black;
+    width: 250px;
+    padding: 10px;
+}
+
 
     /* SALE IMAGE */
 .sale-img img{
