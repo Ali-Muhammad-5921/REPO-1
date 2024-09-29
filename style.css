@@ -565,11 +565,49 @@ header {
     font-size: 16px;
     border-radius: 5px;
 }
-
-
+.product-text-below p{
+    padding: 5px;
+    font-weight: bold;
+}
+.o-price{
+    text-decoration: line-through;
+}
+.price{
+    color: rgb(194, 20, 20);
+}
+.discount{
+    color: rgb(199, 65, 165);
+    padding:10px;
+}
+.slide h2
+{   margin-top: 200px ;
+    margin-bottom: 100px;
+}
 .slide:hover img{
-    opacity: 0.8;
+        opacity: 0.8;
+        transform: scale(1.1s);
 }      
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+
       /* SHOP BY CATEGORY */
 .shop-by-category h2 {
     font-weight: 700;
