@@ -521,58 +521,55 @@ header {
   }
 
     /* IMAGES */
-    .slider {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        margin: 20px auto;
-      }
-      
-      .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-      
-      .slide {
-        min-width: 100%;
-        box-sizing: border-box;
-        padding: 0 20px; /* Space between slides */
-      }
-      
-      .slide img {
-        width: 100%;
-        height: 450px;
-      }
-      
-      .product-text {
-        text-align: center;
-        margin-top: 10px;
-      }
-      
-      .price, .discount {
-        display: block;
-        margin: 5px 0;
-      }
-      
-      button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        border: none;
-        padding: 10px;
-        color: white;
-        cursor: pointer;
-      }
-      
-      .prev {
-        left: 10px;
-      }
-      
-      .next {
-        right: 10px;
-      }
-      
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+/* Slide Container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 90%;
+
+}
+
+/* Each Slide */
+.slide {
+    margin: 0;
+    flex: 0 0 28%; /* Ensures each slide takes up full width */
+    display: flex;
+    padding: 50px;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Image Styling */
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Ensures image covers the space without distortion */
+}
+
+/* Text Overlay on Top of the Image */
+.product-text-overlay {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+.slide:hover img{
+    opacity: 0.8;
+}      
       /* SHOP BY CATEGORY */
 .shop-by-category h2 {
     font-weight: 700;
