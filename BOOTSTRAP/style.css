@@ -1,0 +1,90 @@
+    /* ORANGE BAR ATA THE TOP */
+.sale-bar{
+    background-color: rgb(204, 63, 11);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.3%;
+    cursor: pointer;
+}
+.sale-bar h4{
+    font-size: smaller;
+}
+.sale-bar:hover span{
+    transform: translateX(10px);
+}
+    /* NUMBER, EMAIL AND NOTICE */
+.row{
+    font-size: small;
+    background-color: whitesmoke;
+}
+.numbers{
+    text-align: left;
+    cursor: pointer;
+}
+.email-at-top{
+    text-align: right;
+    cursor: pointer;
+}
+.notice-text {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides the overflow */
+    position: relative;
+  }
+  
+  .notice-text b {
+    display: inline-block;
+    padding-left: 50%; /* Starts the text off-screen */
+    animation: scroll-text 15s linear infinite; /* 10s scrolling time */
+  }
+  
+  @keyframes scroll-text {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End off-screen to the left */
+    }
+  }
+    /* NAV BAR */
+.navbar{
+    position: sticky;
+    z-index: 10000;
+    background-color: white;
+}
+.navbar-logo{
+    margin-left: 52%;
+}
+.navbar-logo img{
+    padding: 5px;
+    height: 60px;
+    width: 150px;
+}
+.icons i{
+    margin-right: 20px;
+    font-weight: 400;
+    color: black;
+    font-size: 25px;
+    transition: all.42s ease;
+}
+.icons i:hover{
+    color: red;
+    transform: scale(1.1);
+}
+.navbar-nav{
+    align-items: center;
+}
+.navbar-nav sup{
+    color: white;
+    background-color: rgb(199, 63, 13);
+    border: 1px solid rgb(199, 63, 13);
+    border-radius: 8px;
+    padding: 2px;
+}
+.navbar-collapse>div{
+    margin-left: 200px;
+}
+.navbar-collapse>div>a{
+    margin-left: 10px;
+}
