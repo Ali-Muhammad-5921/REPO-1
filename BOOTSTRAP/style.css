@@ -257,17 +257,16 @@
     color: black;
     width: 250px;
     padding: 10px;
-}  
-  
-  
-  
+}
     /* TWO  MAIN IMAGES */
+
 .sale-img {
     position: relative;
     width: 100%;
     height: auto;
+    z-index: 999;
+    display: block;
   }
-  
   .sale-img img {
     position: absolute;
     top: 0;
@@ -277,16 +276,13 @@
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease-in-out;
   }
-  
   .sale-img img:nth-child(1) {
     animation: fade 10s infinite;
   }
-  
   .sale-img img:nth-child(2) {
     animation: fade 10s infinite;
     animation-delay: 5s; /* This image will appear after 5 seconds */
   }
-  
   @keyframes fade {
     0%, 100% {
       opacity: 1; /* Image visible at the start and end */
@@ -322,4 +318,61 @@
         box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.5); 
         transition: transform .42s ease;
     }
-      
+    /*  END OF SEASON SALE */ 
+    .abc{
+        margin-top: 31%;
+        margin-bottom: 20px;
+    }  
+h3 {
+    font-weight: bold;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+ h3::before, h3::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #0000003f;
+    margin: 0 15px;
+}      
+ h3 {
+    white-space: nowrap;
+    font-size: 24px; /* Adjust font size */
+}
+.carousel-item img {
+    cursor: pointer;
+    max-height: 500px; /* Adjust as necessary */
+    width: 30%; /* Ensure full width for each image */
+    object-fit: cover; /* Maintain aspect ratio */
+    padding: 5%;
+  }
+  .carousel-item img:hover {
+    transition: all 0.42s ease;
+    transform: scale(1.1s);
+    opacity: 0.8;
+  }
+  .sale-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: blue; /* Background for Sale tag */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding around text */
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners */
+  }
+  .image-info {
+    bottom: 10px; /* Position text at the bottom */
+    left: 10px;
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.6); /* Background for better readability */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+  }
+        /*  NEW ARRIVALS */
+  .NEW-ARRIVALS{
+    margin-top: 10px;
+  }
+  
+  
