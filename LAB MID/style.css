@@ -4,10 +4,10 @@
     max-width: 70%;
     margin-left: 180px;
 }
-.pic{
+
+.pic img{
     margin-left: 100px;
     margin-top: 50px;
-    border: 1px solid blue;
     width: 200px;
     height: 400 px;
     float: left;
@@ -17,7 +17,7 @@
     display: flex;
 }
 .address{
-    padding: 50px;
+    padding: 45px;
     margin-left: 50px;
 }
 .name{  
