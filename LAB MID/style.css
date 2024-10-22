@@ -11,12 +11,14 @@
     width: 200px;
     height: 400 px;
     float: left;
+    cursor: pointer;
 }
 .float{
     display: flex;
 }
 .address{
     padding: 50px;
+    margin-left: 50px;
 }
 .name{  
     margin-left: 100px;
@@ -36,6 +38,9 @@
 }
 .col-3{
     margin-left: 100px;
+    border-right: 3px solid brown;
+    padding-left: 10px;
+    margin-bottom: 100px;
 }
 .col-3 h5{
     font-style: italic;
@@ -45,6 +50,6 @@
     font-size: medium ;
 }
 .col-6{
-    border: 1px solid red;
-    margin-left: 400px;
+    margin-left: 100px;
+    margin-top: 50px;
 }
