@@ -1,0 +1,50 @@
+
+.main{
+    background-color: aliceblue;
+    max-width: 70%;
+    margin-left: 180px;
+}
+.pic{
+    margin-left: 100px;
+    margin-top: 50px;
+    border: 1px solid blue;
+    width: 200px;
+    height: 400 px;
+    float: left;
+}
+.float{
+    display: flex;
+}
+.address{
+    padding: 50px;
+}
+.name{  
+    margin-left: 100px;
+    margin-bottom: 50px;
+    float: left;
+}
+.name h1{
+    color: rgb(177, 31, 31);
+}
+.info p{
+    text-align: left;
+    width: 500px;
+    margin-left: 50px;
+    font-size: larger;
+    font-weight: 500;
+    line-height: 30px;
+}
+.col-3{
+    margin-left: 100px;
+}
+.col-3 h5{
+    font-style: italic;
+}
+.col-3 p{
+    padding: 5px;
+    font-size: medium ;
+}
+.col-6{
+    border: 1px solid red;
+    margin-left: 400px;
+}
