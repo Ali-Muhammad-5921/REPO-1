@@ -1,0 +1,627 @@
+  <!-- TWO  MAIN IMAGES -->
+  <div class="fix">
+    <div class="sale-img">
+      <img class="fade-img" src="/images/Cambric_Collection_web_BannerUS0.webp" alt="">
+      <img class="fade-img" src="/images/Season_End_Sale_Sale_web_Banner.webp" alt="">
+    </div>
+    </div>
+    <!-- END OF SEASON SALE -->
+   <div class="abc">
+    <h3>END OF SEASON SALE</h3>
+        <div id="saleCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row text-center">
+                        <% if (product && product.length > 0) { %>
+                            <% product.forEach(item => { %>
+                                <div class="col-md-3">
+                                    <div class="product-card">
+                                        <div class="">
+                                            <img src="<%= item.image %>" class="d-block w-100" alt="<%= item.name %>">
+                                            <div class="sale-tag">Sale</div>
+                                            <a href="/add-to-cart">
+                                                <button class="add-to-cart" data-id="<%= item._id %>" style="background-color: #007bff; color: white; padding: 10px; border: none;">
+                                                    <i class="bi bi-cart-plus"></i> Add to Cart
+                                                </button>
+                                                </a>
+                                            
+                                        </div>
+                                        <div class="image-info">            
+                                            <h5><%= item.description %></h5>
+                                            <span class="o-price">Rs. <%= item.original_price %></span>
+                                            <span class="price">Rs. <%= item.discount_price %></span>
+                                            <span class="discount">SAVE <%= item.discount %>%</span>
+                                            <a href="/wishlist/add/<%= item._id %>">
+                                                <button type="submit" class="btn btn-light rounded-circle">
+                                                    wish list <!-- This will appear as the button icon -->
+                                                </button>
+                                            </a>
+                                            
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        <% } else { %>
+                            <p>No products available.</p>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+    
+          <div class="carousel-item">
+              <div class="row text-center">
+                  <div class="col-md-3">
+                    <div class="product-card">
+                      <div class="position-relative">
+                          <img src="/images/EOSS-5.webp" class="d-block w-100" alt="Image 5">
+                          <div class="sale-tag">Sale</div>
+                          <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        </div>
+                          <div class="image-info">
+                              <h5>3PC Embroidered Unstitched Lawn Suit KSE-2693</h5>
+                              <span class="o-price">Rs. 9,999</span>
+                              <span class="price">Rs. 6,999</span>
+                              <span class="discount">SAVE 30%</span>
+                          </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="product-card">
+                      <div class="position-relative">
+                          <img src="/images/EOSS-6.webp" class="d-block w-100" alt="Image 6">
+                          <div class="sale-tag">Sale</div>
+                          <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        </div>
+                          <div class="image-info">
+                              <h5>2PC Unstitched Printed Lawn Shirt and Dupatta KSD-2830</h5>
+                              <span class="o-price">Rs. 3,099</span>
+                              <span class="price">Rs. 2,169</span>
+                              <span class="discount">SAVE 30%</span>
+                          </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="product-card">
+                      <div class="position-relative">
+                          <img src="/images/EOSS-7.webp" class="d-block w-100" alt="Image 7">
+                          <div class="sale-tag">Sale</div>
+                          <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        </div>
+                          <div class="image-info">
+                              <h5>2PC Unstitched Printed Lawn Shirt and Dupatta KSD-2829</h5>
+                              <span class="o-price">Rs. 3,099</span>
+                              <span class="price">Rs. 2,169</span>
+                              <span class="discount">SAVE 30%</span>
+                          </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="product-card">
+                      <div class="position-relative">
+                          <img src="/images/EOSS-8.webp" class="d-block w-100" alt="Image 8">
+                          <div class="sale-tag">Sale</div>
+                          <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                          <div class="image-info">
+                              <h5>3PC Embroidered Unstitched Jacquared Suit KCNE-2622</h5>
+                              <span class="o-price">Rs. 8,999</span>
+                              <span class="price">Rs. 6,299</span>
+                              <span class="discount">SAVE 30%</span>
+                          </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="position-relative">
+                        <div class="product-card">
+                        <img src="/images/EOSS-9.webp" class="d-block w-100" alt="Image 9">
+                        <div class="sale-tag">Sale</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                        <div class="image-info">
+                            <h5>3PC Embroidered Unstitched Jacquared Suit KCNE-2621</h5>
+                            <span class="o-price">Rs. 8,999</span>
+                            <span class="price">Rs. 6,299</span>
+                            <span class="discount">SAVE 30%</span>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/images/EOSS-10.webp" class="d-block w-100" alt="Image 10">
+                        <div class="sale-tag">Sale</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                        <div class="image-info">
+                            <h5>3PC Embroidered Unstitched Jacquared Suit KCNE-2620</h5>
+                            <span class="o-price">Rs. 8,999</span>
+                            <span class="price">Rs. 6,299</span>
+                            <span class="discount">SAVE 30%</span>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/images/EOSS-11.webp" class="d-block w-100" alt="Image 11">
+                        <div class="sale-tag">Sale</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                      </div>
+                    </div>
+                        <div class="image-info">
+                            <h5>3PC Embroidered Unstitched Jacquared Suit KCNE-2619</h5>
+                            <span class="o-price">Rs. 8,999</span>
+                            <span class="price">Rs. 6,299</span>
+                            <span class="discount">SAVE 30%</span>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/images/EOSS-12.webp" class="d-block w-100" alt="Image 12">
+                        <div class="sale-tag">Sale</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                      </div>
+                    </div>
+                        <div class="image-info">
+                            <h5>3PC Embroidered Unstitched Jacquared Suit KCNE-2618</h5>
+                            <span class="o-price">Rs. 8,999</span>
+                            <span class="price">Rs. 6,299</span>
+                            <span class="discount">SAVE 30%</span>
+                         </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row text-center">
+              <div class="col-md-3">
+                <div class="product-card">
+                  <div class="position-relative">
+                      <img src="/images/EOSS-13.webp" class="d-block w-100" alt="Image 13">
+                      <div class="sale-tag">Sale</div>
+                      <button class="add-to-cart">Add to Cart</button>
+                  </div>  
+                </div>
+                  <div class="image-info">
+                      <h5>3PC Embroidered Unstitched Lawn Suit KL-2737</h5>
+                      <span class="o-price">Rs. 5,999</span>
+                      <span class="price">Rs. 4,199</span>
+                      <span class="discount">SAVE 30%</span>
+                  </div>    
+              </div>
+              <div class="col-md-3">
+                <div class="product-card">
+                  <div class="position-relative">
+                      <img src="/images/EOSS-14.webp" class="d-block w-100" alt="Image 14">
+                      <div class="sale-tag">Sale</div>
+                      <button class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+                  <div class="image-info">
+                      <h5>3PC Embroidered Unstitched Lawn Suit KL-2736</h5>
+                      <span class="o-price">Rs. 5,999</span>
+                      <span class="price">Rs. 4,199</span>
+                      <span class="discount">SAVE 30%</span>
+                   </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-card">
+                  <div class="position-relative">
+                      <img src="/images/EOSS-15.webp" class="d-block w-100" alt="Image 15">
+                      <div class="sale-tag">Sale</div>
+                      <button class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+                      <div class="image-info">
+                          <h5>3PC Embroidered Unstitched Lawn Suit KL-2735</h5>
+                          <span class="o-price">Rs. 5,999</span>
+                          <span class="price">Rs. 4,199</span>
+                          <span class="discount">SAVE 30%</span>
+                      </div>
+              </div>
+              <div class="col-md-3">
+                <div class="product-card">
+                  <div class="position-relative">
+                      <img src="/images/EOSS-16.webp" class="d-block w-100" alt="Image 16">
+                      <div class="sale-tag">Sale</div>
+                      <button class="add-to-cart">Add to Cart</button>
+
+                  </div>
+                </div>
+                  <div class="image-info">
+                      <h5>3PC Embroidered Unstitched Lawn Suit KL-2734</h5>
+                      <span class="o-price">Rs. 5,999</span>
+                      <span class="price">Rs. 4,199</span>
+                      <span class="discount">SAVE 30%</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+          <!-- Repeat the above block for more carousel items -->
+      </div>
+  
+      <button class="carousel-control-prev" type="button" data-bs-target="#saleCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#saleCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+
+   
+      <!--  NEW ARRIVALS -->
+      <div class="NEW-ARRIVALS">
+        <h3>NEW ARRIVALS</h3>
+          <div class="d-flex justify-content-center my-4">
+            <a href="#" class="btn btn-outline-dark dark mx-2">Unstitched</a>
+            <a href="#" class="btn btn-outline-dark mx-2">Ready To Wear</a>
+            <a href="#" class="btn btn-outline-dark mx-2">Home</a>
+          </div>
+        <div id="saleCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="row text-center">
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-printed-unstitched-lawn-suit-kla-2795-NA.webp" class="d-block w-100" alt="Image 1">
+                              <a href="/add-to-cart">
+                              <button class="add-to-cart">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button> </a>
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-printed-unstitched-lawn-suit-kla-2795</h5>
+                                  <span class="o-price">Rs. 5,999</span>
+                                  <span class="price">Rs. 4,199</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-printed-unstitched-lawn-suit-kla-2791-NA-2.webp" class="d-block w-100" alt="Image 2">
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-printed-unstitched-lawn-suit-kla-2791</h5>
+                                  <span class="o-price">Rs. 5,999</span>
+                                  <span class="price">Rs. 4,199</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-embroidered-unstitched-lawn-suit-kl-2812-NA-3.webp" class="d-block w-100" alt="Image 3">
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-embroidered-unstitched-lawn-suit-kl-2812</h5>
+                                  <span class="o-price">Rs. 9,999</span>
+                                  <span class="price">Rs. 6,999</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-embroidered-unstitched-lawn-suit-kl-2811-NA-4.webp" class="d-block w-100" alt="Image 4">
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-embroidered-unstitched-lawn-suit-kl-2811</h5>
+                                  <span class="o-price">Rs. 9,999</span>
+                                  <span class="price">Rs. 6,999</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="row text-center">
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-embroidered-unstitched-lawn-suit-koe-2667-NA-5.webp" class="d-block w-100" alt="Image 5">
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-embroidered-unstitched-lawn-suit-koe-2667</h5>
+                                  <span class="o-price">Rs. 9,999</span>
+                                  <span class="price">Rs. 6,999</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-embroidered-unstitched-lawn-suit-koe-2666-NA-6.webp" class="d-block w-100" alt="Image 6">
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-embroidered-unstitched-lawn-suit-koe-2666</h5>
+                                  <span class="o-price">Rs. 3,099</span>
+                                  <span class="price">Rs. 2,169</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-embroidered-unstitched-lawn-suit-koe-2665-NA-7.webp" class="d-block w-100" alt="Image 7">
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-embroidered-unstitched-lawn-suit-koe-2665</h5>
+                                  <span class="o-price">Rs. 3,099</span>
+                                  <span class="price">Rs. 2,169</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="position-relative">
+                              <img src="/images/3pc-embroidered-unstitched-lawn-suit-koe-2664-NA-8.webp" class="d-block w-100" alt="Image 8">
+                              <div class="sale-tag">Sale</div>
+                            </div>
+                              <div class="image-info">
+                                  <h5>3pc-embroidered-unstitched-lawn-suit-koe-2664</h5>
+                                  <span class="o-price">Rs. 8,999</span>
+                                  <span class="price">Rs. 6,299</span>
+                                  <span class="discount">SAVE 30%</span>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="position-relative">
+                            <img src="/images/3pc-embroidered-unstitched-lawn-suit-koe-2663-NA-9.webp" class="d-block w-100" alt="Image 9">
+                            <div class="sale-tag">Sale</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>3pc-embroidered-unstitched-lawn-suit-koe-2663</h5>
+                                <span class="o-price">Rs. 8,999</span>
+                                <span class="price">Rs. 6,299</span>
+                                <span class="discount">SAVE 30%</span>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="position-relative">
+                            <img src="/images/3pc-embroidered-unstitched-lawn-suit-kl-2817-NA-10.webp" class="d-block w-100" alt="Image 10">
+                            <div class="sale-tag">Sale</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>3pc-embroidered-unstitched-lawn-suit-kl-2817</h5>
+                                <span class="o-price">Rs. 8,999</span>
+                                <span class="price">Rs. 6,299</span>
+                                <span class="discount">SAVE 30%</span>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="position-relative">
+                            <img src="/images/3pc-embroidered-unstitched-lawn-suit-kl-2816-NA-11.webp" class="d-block w-100" alt="Image 11">
+                            <div class="sale-tag">Sale</div>
+                          </div>
+                            <div class="image-info">
+                                <h5>3pc-embroidered-unstitched-lawn-suit-kl-2816</h5>
+                                <span class="o-price">Rs. 8,999</span>
+                                <span class="price">Rs. 6,299</span>
+                                <span class="discount">SAVE 30%</span>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="position-relative">
+                            <img src="/images/3pc-embroidered-unstitched-lawn-suit-kl-2815-NA-12.webp" class="d-block w-100" alt="Image 12">
+                            <div class="sale-tag">Sale</div>
+                          </div>
+                            <div class="image-info">
+                                <h5>3pc-embroidered-unstitched-lawn-suit-kl-2815</h5>
+                                <span class="o-price">Rs. 8,999</span>
+                                <span class="price">Rs. 6,299</span>
+                                <span class="discount">SAVE 30%</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row text-center">
+                  <div class="col-md-3">
+                      <div class="position-relative">
+                          <img src="/images/3pc-embroidered-unstitched-lawn-suit-kl-2814-NA-13.webp" class="d-block w-100" alt="Image 13">
+                          <div class="sale-tag">Sale</div>
+                      </div>  
+                      <div class="image-info">
+                          <h5>3pc-embroidered-unstitched-lawn-suit-kl-2814</h5>
+                          <span class="o-price">Rs. 5,999</span>
+                          <span class="price">Rs. 4,199</span>
+                          <span class="discount">SAVE 30%</span>
+                      </div>    
+                  </div>
+                  <div class="col-md-3">
+                      <div class="position-relative">
+                          <img src="/images/3pc-embroidered-unstitched-lawn-suit-kl-2813-NA-14.webp" class="d-block w-100" alt="Image 14">
+                          <div class="sale-tag">Sale</div>
+                      </div>
+                      <div class="image-info">
+                          <h5>3pc-embroidered-unstitched-lawn-suit-kl-2813</h5>
+                          <span class="o-price">Rs. 5,999</span>
+                          <span class="price">Rs. 4,199</span>
+                          <span class="discount">SAVE 30%</span>
+                       </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="position-relative">
+                          <img src="/images/3pc-embroidered-unstitched-lawn-suit-kse-2627-NA-15.webp" class="d-block w-100" alt="Image 15">
+                          <div class="sale-tag">Sale</div>
+                      </div>
+                          <div class="image-info">
+                              <h5>3pc-embroidered-unstitched-lawn-suit-kse-2627</h5>
+                              <span class="o-price">Rs. 5,999</span>
+                              <span class="price">Rs. 4,199</span>
+                              <span class="discount">SAVE 30%</span>
+                          </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="position-relative">
+                          <img src="/images/3pc-embroidered-unstitched-lawn-suit-kse-2626-NA-16.webp" class="d-block w-100" alt="Image 16">
+                          <div class="sale-tag">Sale</div>
+                      </div>
+                      <div class="image-info">
+                          <h5>3pc-embroidered-unstitched-lawn-suit-kse-2626</h5>
+                          <span class="o-price">Rs. 5,999</span>
+                        <span class="price">Rs. 4,199</span>
+                        <span class="discount">SAVE 30%</span>
+                      </div>
+                  </div>
+              </div>
+            </div>
+              <!-- Repeat the above block for more carousel items -->
+          </div>
+      
+          <button class="carousel-control-prev" type="button" data-bs-target="#saleCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#saleCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+       </div>
+  
+        <!-- SHOP BY CATEGORY -->
+        <div class="SHOP-BY-CATEGORY my-5">
+          <h3 class="text-center">SHOP BY CATEGORY</h3>
+          <div class="container">
+              <div class="row text-center">
+                  <!-- Category 1 -->
+                  <div class="col-md-3 col-sm-6 mb-4 cp">
+                      <div class="card">
+                          <img src="/images/EMBROIDERED-SBC.webp" class="card-img-top" alt="Category 1">
+                          <div class="card-body">
+                              <h5 class="card-title">Category 1</h5>
+                              <a href="#" class="btn btn-outline-dark">Shop Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Category 2 -->
+                  <div class="col-md-3 col-sm-6 mb-4 cp">
+                      <div class="card">
+                          <img src="/images/PRINTED-SBC.webp" class="card-img-top" alt="Category 2">
+                          <div class="card-body">
+                              <h5 class="card-title">Category 2</h5>
+                              <a href="#" class="btn btn-outline-dark">Shop Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Category 3 -->
+                  <div class="col-md-3 col-sm-6 mb-4 cp">
+                      <div class="card">
+                          <img src="/images/MEN-SBC.webp" class="card-img-top" alt="Category 3">
+                          <div class="card-body">
+                              <h5 class="card-title">Category 3</h5>
+                              <a href="#" class="btn btn-outline-dark">Shop Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Category 4 -->
+                  <div class="col-md-3 col-sm-6 mb-4 cp">
+                      <div class="card">
+                          <img src="/images/HOME-SBC.webp" class="card-img-top" alt="Category 4">
+                          <div class="card-body">
+                              <h5 class="card-title">Category 4</h5>
+                              <a href="#" class="btn btn-outline-dark">Shop Now</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="info">
+            <li class=" col-4">
+                <i class='bx bx-car'></i>
+                    <b>FREE SHIPPING</b>
+                    <P>Free shipping on order above Rs. 3000.</P>
+                
+            </li>
+            <li class=" col-4">
+                <i class='bx bx-color' ></i>
+                    <b>WATSAPP HELP</b>
+                    <P>WhatsApp us at +92 300 8604310 (Between 9:00 AM to 6:00 PM Monday - Saturday).</P>    
+                </li>
+            <li class=" col-4">
+                <i class='bx bx-rotate-right'></i>
+                    <b>07 DAYS RETURN</b>
+                    <P>Simply return it within 07 Days of purchase for a refund or an exchange. Note: Sale items are just exchangeable.</P>    
+            </li>
+        </div>
+      </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', async () => {
+                const productId = button.dataset.id; // Get product ID from the button
+                try {
+                    // Fetch product details from the server
+                    const response = await fetch(`/admin/product/${productId}`);
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch product details');
+                    }
+                    const product = await response.json();
+    
+                    // Populate the form with product details
+                    document.querySelector('.card-body h2').textContent = product.name; // Update product name
+                    document.querySelector('.text-success').textContent = `PKR ${product.price}`; // Update price
+                    document.querySelector('.card img').src = product.image; // Update image
+                    document.querySelector('#quantity').value = 1; // Reset quantity to 1
+    
+                    // Show the form
+                    document.querySelector('.container').style.display = 'block';
+                } catch (error) {
+                    console.error(error);
+                    alert('Error loading product details');
+                }
+            });
+        });
+    });
+    //wishlist
+    async function addToWishlist(productId) {
+    try {
+        const response = await fetch('/wishlist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId: 'userIdHere', productId }), // Replace with actual user ID
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            alert(result.message);
+        } else {
+            alert(result.message);
+        }
+    } catch (error) {
+        console.error('Error adding to wishlist:', error);
+    }
+}
+async function fetchWishlist(userId) {
+    try {
+        const response = await fetch(`/myWishlist?userId=${userId}`);
+        const wishlist = await response.json();
+        console.log('Wishlist:', wishlist);
+        // Dynamically render wishlist items in the frontend
+    } catch (error) {
+        console.error('Error fetching wishlist:', error);
+    }
+}
+
+// Call this function on page load
+fetchWishlist('userIdHere'); // Replace with actual user ID
+
+</script>
+  
+      

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-title {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4A90E2;
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #4A90E2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #357ABD;
+        }
+
+        .file-input-container {
+            position: relative;
+        }
+
+        .file-input-button {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0.75rem;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: block;
+            color: #555;
+        }
+
+        .file-input-button:hover {
+            background-color: #e9ecef;
+            border-color: #4A90E2;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-name {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Price fields styles */
+        .price-fields {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-input {
+            position: relative;
+        }
+
+        .discount-input input {
+            padding-right: 1.5rem;
+        }
+
+        .discount-input::after {
+            content: "%";
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Add New Product</h2>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+
+            <div class="price-fields">
+                <div class="form-group">
+                    <label for="original_price">Original Price</label>
+                    <div class="price-input">
+                        <input type="number" id="original_price" name="original_price" step="0.01" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="discount_price">Discount Price</label>
+                    <div class="price-input">
+                        <input type="number" id="discount_price" name="discount_price" step="0.01" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="discount">Discount Percentage</label>
+                    <div class="price-input discount-input">
+                        <input type="number" id="discount" name="discount" step="0.1" min="0" max="100" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Product Image</label>
+                <div class="file-input-container">
+                    <label for="image" class="file-input-button">Choose Image</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <div class="file-name" id="file-name">No file chosen</div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Product</button>
+        </form>
+    </div>
+
+    <script>
+        // Display selected file name
+        document.getElementById('image').addEventListener('change', function(e) {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
+            document.getElementById('file-name').textContent = fileName;
+        });
+
+        // Auto-calculate discount percentage when prices change
+        const originalPriceInput = document.getElementById('original_price');
+        const discountPriceInput = document.getElementById('discount_price');
+        const discountInput = document.getElementById('discount');
+
+        function calculateDiscount() {
+            const originalPrice = parseFloat(originalPriceInput.value) || 0;
+            const discountPrice = parseFloat(discountPriceInput.value) || 0;
+            
+            if (originalPrice > 0 && discountPrice <= originalPrice) {
+                const discount = ((originalPrice - discountPrice) / originalPrice) * 100;
+                discountInput.value = discount.toFixed(1);
+            }
+        }
+
+        function calculateDiscountPrice() {
+            const originalPrice = parseFloat(originalPriceInput.value) || 0;
+            const discount = parseFloat(discountInput.value) || 0;
+            
+            if (originalPrice > 0 && discount >= 0 && discount <= 100) {
+                const discountPrice = originalPrice * (1 - discount / 100);
+                discountPriceInput.value = discountPrice.toFixed(2);
+            }
+        }
+
+        originalPriceInput.addEventListener('input', calculateDiscount);
+        discountPriceInput.addEventListener('input', calculateDiscount);
+        discountInput.addEventListener('input', calculateDiscountPrice);
+    </script>
+</body>
+</html>

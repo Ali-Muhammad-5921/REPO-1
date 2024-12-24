@@ -1,0 +1,208 @@
+<!-- Products Page -->
+<div class="container mt-4">
+    <h3>Products</h3>
+    
+    <!-- Search and Sort Controls -->
+    <div class="row mb-4 justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="d-flex gap-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search an item within..." style="width: 400px;">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort By
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                        <li><a class="dropdown-item" href="#" data-sort="title">Product Name</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="original_price">Price</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="description">Description</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/admin/products/create" class="btn btn-info mb-3">Create New Product</a>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>_id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Original Price</th>
+                <th>Discount Price</th>
+                <th>Discount</th>
+                <th>Image</th>
+                <th>Featured</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody">
+            <% for (let i = 0 ; i < products.length ; i++) { %>
+                <tr>
+                    <td><%= products[i]._id %></td>
+                    <td><%= products[i].title %></td>
+                    <td><%= products[i].description %></td>
+                    <td><%= products[i].original_price %></td>
+                    <td><%= products[i].discount_price %></td>
+                    <td><%= products[i].discount %></td>
+                    <td>
+                        <% if (products[i].image) { %>
+                            <img src="/uploads/<%= products[i].image %>" alt="<%= products[i].title %> Image" class="img-thumbnail" style="max-width: 100px;">
+                        <% } else { %>
+                            <span>No Image</span>
+                        <% } %>
+                    </td>
+                    <td><%= products[i].featured ? 'Yes' : 'No' %></td>
+                    <td>
+                        <a href="/admin/products/edit/<%= products[i]._id %>" class="btn btn-warning">Edit</a>
+                        <a href="/admin/products/add-to-cart/<%= products[i]._id %>" class="btn btn-danger">Add To Cart</a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    
+    
+</div>
+
+
+<!-- Add this to your CSS -->
+<style>
+    .search-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    
+    #searchInput {
+        padding-right: 40px;
+    }
+    
+    .sort-dropdown {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+</style>
+
+<!-- Add this to your JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const productTableBody = document.getElementById('productTableBody');
+    const sortDropdown = document.querySelectorAll('.dropdown-item');
+    const itemsPerPage = 10;
+    let currentPage = 1;
+    let products = []; // Initialize an empty array for products
+
+    function loadProducts() {
+        products = Array.from(productTableBody.getElementsByTagName('tr')); // Refresh products list
+        updatePagination();
+    }
+
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        filterProducts(searchTerm);
+        updatePagination();
+    });
+
+    // Sort functionality
+    sortDropdown.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const sortBy = this.getAttribute('data-sort');
+            sortProducts(sortBy);
+            updatePagination();
+        });
+    });
+
+    function filterProducts(searchTerm) {
+        products.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(searchTerm) ? '' : 'none';
+        });
+    }
+
+    function sortProducts(sortBy) {
+        products.sort((a, b) => {
+            let aValue = a.querySelector(`td:nth-child(${getColumnIndex(sortBy)})`).textContent;
+            let bValue = b.querySelector(`td:nth-child(${getColumnIndex(sortBy)})`).textContent;
+
+            if (sortBy === 'original_price') {
+                return parseFloat(aValue) - parseFloat(bValue);
+            }
+            return aValue.localeCompare(bValue);
+        });
+
+        // Reorder the table rows after sorting
+        products.forEach(row => productTableBody.appendChild(row));
+    }
+
+    function getColumnIndex(sortBy) {
+        const columns = {
+            'title': 2,
+            'description': 3,
+            'original_price': 4
+        };
+        return columns[sortBy];
+    }
+
+    function updatePagination() {
+        const visibleProducts = products.filter(row => row.style.display !== 'none');
+        const pageCount = Math.ceil(visibleProducts.length / itemsPerPage);
+
+        // Update pagination UI
+        const pagination = document.querySelector('.pagination');
+        pagination.innerHTML = '';
+
+        // Previous button
+        pagination.appendChild(createPaginationItem('Previous', currentPage > 1, currentPage - 1));
+
+        // Page numbers
+        for (let i = 1; i <= pageCount; i++) {
+            pagination.appendChild(createPaginationItem(i, true, i, currentPage === i));
+        }
+
+        // Next button
+        pagination.appendChild(createPaginationItem('Next', currentPage < pageCount, currentPage + 1));
+
+        // Show products for current page
+        showPage(currentPage, visibleProducts);
+    }
+
+    function createPaginationItem(text, enabled, pageNum, active = false) {
+        const li = document.createElement('li');
+        li.className = `page-item ${!enabled ? 'disabled' : ''} ${active ? 'active' : ''}`;
+
+        const a = document.createElement('a');
+        a.className = 'page-link';
+        a.href = '#';
+        a.textContent = text;
+
+        if (enabled) {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentPage = pageNum;
+                updatePagination();
+            });
+        }
+
+        li.appendChild(a);
+        return li;
+    }
+
+    function showPage(page, visibleProducts) {
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        visibleProducts.forEach((row, index) => {
+            row.style.display = (index >= start && index < end) ? '' : 'none';
+        });
+    }
+
+    // Initial load of products and pagination setup
+    loadProducts();
+});
+</script>
